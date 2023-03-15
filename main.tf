@@ -32,7 +32,7 @@ data "aws_ami" "ubuntu_ami" {
 ### AWS instance resource
 resource "aws_instance" "wa_demo_instance" {
   ami           = data.aws_ami.ubuntu_ami.id
-  instance_type = "t3.micro"
+  instance_type = "t3.medium"
 
   associate_public_ip_address = true
 
